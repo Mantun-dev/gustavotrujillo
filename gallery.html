@@ -21,6 +21,44 @@
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
 		<![endif]-->
+    <style>
+      /* En tu archivo CSS personalizado o en una etiqueta <style> */
+
+      /* Asegúrate de que la figcaption sea siempre visible */
+      .thumbnail-josip figcaption {
+          opacity: 1 !important; /* !important fuerza la regla */
+          visibility: visible !important;
+          transform: none !important; /* Si hay transformaciones que lo oculten */
+          transition: none !important; /* Elimina la transición de ocultamiento */
+      }
+
+      /* Asegúrate de que el h6 sea siempre visible si tiene alguna regla de ocultamiento */
+      .thumbnail-josip-title {
+          opacity: 1 !important;
+          visibility: visible !important;
+          /* Cualquier otra propiedad de ocultamiento que pueda tener */
+      }
+
+      /* Asegúrate de que el párrafo sea siempre visible */
+      .thumbnail-josip p.veil { /* Para ser más específico si la clase 'veil' lo oculta */
+          display: block !important; /* O 'unset', o 'initial' dependiendo de cómo se oculta */
+          opacity: 1 !important;
+          visibility: visible !important;
+      }
+
+      /* Si hay una regla para el hover que lo oculta, la sobrescribes para que no haga nada */
+      .thumbnail-josip:hover figcaption {
+          /* No hagas nada, o asegúrate de que siga visible */
+          opacity: 1 !important;
+          visibility: visible !important;
+      }
+
+      /* Si el .offset-top-14 también se oculta con hover */
+      .thumbnail-josip .offset-top-14 {
+          opacity: 1 !important;
+          visibility: visible !important;
+      }
+    </style>
   </head>
   <body>
     <!-- Page-->
@@ -94,33 +132,29 @@
       <!-- Page Contents-->
       <main class="page-content" style="background: #020000;">
         <!-- Oil Paintings wide 3 columns-->
-        <section class="section-98 section-sm-110">
-                          <h1><br>Oil Paintings on Stretch Canvas</h1>
-          <div class="shell shell-wide">
-            <div class="offset-top-50">
-                      <div class="isotope-wrap">
-                        <div class="row">
-                          <!-- Isotope Filters-->
+         <section class="section-98 section-sm-110">
+            <div class="shell shell-wide">
+                <div class="offset-top-50">
+                    <div class="isotope-wrap">
+                      <div class="row">
                           <div class="col-lg-12">
-                            <div class="isotope-filters isotope-filters-horizontal">
-                              <ul class="list-inline list-inline-sm">
-                                <li class="section-relative">
-                                  <button class="isotope-filters-toggle btn btn-sm btn-default" data-custom-toggle="isotope-1" data-custom-toggle-disable-on-blur="true">Filter<span class="caret"></span></button>
-                                  <ul class="list-sm-inline isotope-filters-list" id="isotope-1">
-                                    <li><a class="text-bold active" data-isotope-filter="Page 1" data-isotope-group="gallery" href="#">Page 1</a></li>
-                                    <li><a class="text-bold" data-isotope-filter="Page 2" data-isotope-group="gallery" href="#">Page 2</a></li>
-                                    <li><a class="text-bold" data-isotope-filter="Page 3" data-isotope-group="gallery" href="#">Page 3</a></li>
-                                    <li><a class="text-bold" data-isotope-filter="Page 4" data-isotope-group="gallery" href="#">Page 4</a></li>
+                              <div class="isotope-filters isotope-filters-horizontal">
+                                  <ul class="list-inline list-inline-sm">
+                                    <li class="section-relative">
+                                      <button class="isotope-filters-toggle btn btn-sm btn-default" data-custom-toggle="isotope-1" data-custom-toggle-disable-on-blur="true">Filter<span class="caret"></span></button>
+                                      <ul class="list-sm-inline isotope-filters-list" id="isotope-1">
+                                          <li><a class="text-bold active" data-isotope-filter="Page 1" data-isotope-group="gallery" href="#"><h3><br>Oil Paintings on Stretch Canvas</h3></a></li>
+                                          <li><a class="text-bold" data-isotope-filter="Page 2" data-isotope-group="gallery" href="#"><h3>Acrylic Paintings on Canvas</h3></a></li>
+                                      </ul>
+                                    </li>
                                   </ul>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
+                              </div>
+                          </div>                          
                           <!-- Isotope Content-->
                           <div class="col-lg-12 offset-top-34">
                             <div class="isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
                               <div class="row" data-photo-swipe-gallery="gallery">
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
+                                  <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="910x700" href="../images/portfolio/portfolio-01-910x700.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-01-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="910x700" href="../images/portfolio/portfolio-01-910x700.jpg">detail</a>
@@ -186,7 +220,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x663" href="../images/portfolio/portfolio-07-500x663.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-07-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x663" href="../images/portfolio/portfolio-07-500x663.jpg">detail</a>
@@ -197,7 +231,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="1011x700" href="../images/portfolio/portfolio-08-1011x700.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-08-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="1011x700" href="../images/portfolio/portfolio-08-1011x700.jpg">detail</a>
@@ -208,7 +242,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x741" href="../images/portfolio/portfolio-09-500x741.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-09-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x741" href="../images/portfolio/portfolio-09-500x741.jpg">detail</a>
@@ -219,7 +253,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x998" href="../images/portfolio/portfolio-10-500x998.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-10-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x998" href="../images/portfolio/portfolio-10-500x998.jpg">detail</a>
@@ -230,7 +264,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x974" href="../images/portfolio/portfolio-11-500x974.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-11-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x974" href="../images/portfolio/portfolio-11-500x974.jpg">detail</a>
@@ -241,7 +275,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="461x963" href="../images/portfolio/portfolio-12-461x963.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-12-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="461x963" href="../images/portfolio/portfolio-12-461x963.jpg">detail</a>
@@ -252,7 +286,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 3">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x663" href="../images/portfolio/portfolio-13-500x663.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-13-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x663" href="../images/portfolio/portfolio-13-500x663.jpg">detail</a>
@@ -263,7 +297,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 3">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x634" href="../images/portfolio/portfolio-14-500x634.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-14-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x634" href="../images/portfolio/portfolio-14-500x634.jpg">detail</a>
@@ -274,7 +308,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 3">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="622x500" href="../images/portfolio/portfolio-15-622x500.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-15-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="622x500" href="../images/portfolio/portfolio-15-622x500.jpg">detail</a>
@@ -285,7 +319,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 3">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x989" href="../images/portfolio/portfolio-16-500x989.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-16-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x989" href="../images/portfolio/portfolio-16-500x989.jpg">detail</a>
@@ -296,7 +330,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 3">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="1066x700" href="../images/portfolio/portfolio-17-1066x700.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-17-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="1066x700" href="../images/portfolio/portfolio-17-1066x700.jpg">detail</a>
@@ -307,7 +341,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 3">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x1002" href="../images/portfolio/portfolio-18-500x1002.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-18-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x1002" href="../images/portfolio/portfolio-18-500x1002.jpg">detail</a>
@@ -318,7 +352,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 4">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="642x500" href="../images/portfolio/portfolio-19-642x500.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-19-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="642x500" href="../images/portfolio/portfolio-19-642x500.jpg">detail</a>
@@ -329,25 +363,10 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-            </div>
-          </div>
-        <!-- Oil Paintings wide 3 columns-->
-        <section class="section-98 section-sm-110">
-                          <h1>Acrylic Paintings on Canvas</h1>
-          <div class="shell shell-wide">
-            <div class="offset-top-50">
-                      <div class="isotope-wrap">
-                        <div class="row">
-                          <!-- Isotope Content-->
-                          <div class="col-lg-12 offset-top-34">
-                            <div class="isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
-                              <div class="row" data-photo-swipe-gallery="gallery">
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
+
+
+                                <!-- AQUI ACRILICOS -->
+                                  <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x693" href="../images/portfolio/portfolio-01a-500x693.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-01a-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x693" href="../images/portfolio/portfolio-01a-500x693.jpg">detail</a>
@@ -358,7 +377,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x686" href="../images/portfolio/portfolio-02a-500x686.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-02a-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x686" href="../images/portfolio/portfolio-02a-500x686.jpg">detail</a>
@@ -369,7 +388,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x682" href="../images/portfolio/portfolio-03a-500x682.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-03a-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x682" href="../images/portfolio/portfolio-03a-500x682.jpg">detail</a>
@@ -380,7 +399,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x687" href="../images/portfolio/portfolio-04a-500x687.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-04a-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x687" href="../images/portfolio/portfolio-04a-500x687.jpg">detail</a>
@@ -391,7 +410,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x667" href="../images/portfolio/portfolio-05a-500x667.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-05a-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x667" href="../images/portfolio/portfolio-05a-500x667.jpg">detail</a>
@@ -402,7 +421,7 @@
                                             </figcaption>
                                           </figure>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 1">
+                                <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Page 2">
                                           <!-- Thumbnail Josip-->
                                           <figure class="thumbnail-josip"><a data-photo-swipe-item="" data-size="500x681" href="../images/portfolio/portfolio-06a-500x681.jpg"><img width="570" height="420" src="../images/portfolio/portfolio-06a-570x420.jpg" alt=""></a>
                                             <figcaption><a class="btn btn-xs btn-primary offset-top-10 pull-right" data-photo-swipe-item="" data-size="500x681" href="../images/portfolio/portfolio-06a-500x681.jpg">detail</a>
@@ -468,6 +487,56 @@
                                             </figcaption>
                                           </figure>
                                 </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- <section class="section-98 section-sm-110">
+                          <h1><br>Oil Paintings on Stretch Canvas</h1>
+          <div class="shell shell-wide">
+            <div class="offset-top-50">
+                      <div class="isotope-wrap">
+                        <div class="row">                          
+                          <div class="col-lg-12">
+                            <div class="isotope-filters isotope-filters-horizontal">
+                              <ul class="list-inline list-inline-sm">
+                                <li class="section-relative">
+                                  <button class="isotope-filters-toggle btn btn-sm btn-default" data-custom-toggle="isotope-1" data-custom-toggle-disable-on-blur="true">Filter<span class="caret"></span></button>
+                                  <ul class="list-sm-inline isotope-filters-list" id="isotope-1">
+                                    <li><a class="text-bold active" data-isotope-filter="Page 1" data-isotope-group="gallery" href="#">Page 1</a></li>
+                                    <li><a class="text-bold" data-isotope-filter="Page 2" data-isotope-group="gallery" href="#">Page 2</a></li>
+                                    <li><a class="text-bold" data-isotope-filter="Page 3" data-isotope-group="gallery" href="#">Page 3</a></li>
+                                    <li><a class="text-bold" data-isotope-filter="Page 4" data-isotope-group="gallery" href="#">Page 4</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>                          
+                          <div class="col-lg-12 offset-top-34">
+                            <div class="isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
+                              <div class="row" data-photo-swipe-gallery="gallery">
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            </div>
+          </div>      
+        <section class="section-98 section-sm-110">
+                          <h1>Acrylic Paintings on Canvas</h1>
+          <div class="shell shell-wide">
+            <div class="offset-top-50">
+                      <div class="isotope-wrap">
+                        <div class="row">                          
+                          <div class="col-lg-12 offset-top-34">
+                            <div class="isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
+                              <div class="row" data-photo-swipe-gallery="gallery">
+                               
                               </div>
                             </div>
                           </div>
@@ -475,7 +544,7 @@
                       </div>
             </div>
           </div>
-        </section>
+        </section> -->
       </main>
       
         <!-- Page Footers-->
